@@ -1,0 +1,261 @@
+/* Reset and base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #f9fafb;
+  color: #222;
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+/* Container utility */
+.container {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1.2rem;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #004aad;
+  padding: 1rem 0;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 1.5px;
+  user-select: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.6rem;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  background-color: #ff6f00;
+  color: white;
+}
+
+/* Form Section */
+.form-section {
+  background: white;
+  margin: 3rem auto 5rem;
+  padding: 3rem 2.5rem;
+  border-radius: 14px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.07);
+  max-width: 700px;
+}
+
+.form-section h2 {
+  color: #004aad;
+  font-size: 2.6rem;
+  margin-bottom: 0.3rem;
+  font-weight: 800;
+}
+
+.form-section p {
+  color: #555;
+  font-size: 1.15rem;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+/* Form Styles */
+.form-card label {
+  display: block;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #333;
+  margin-top: 1.5rem;
+  margin-bottom: 0.6rem;
+  user-select: none;
+}
+
+.form-card input[type="text"],
+.form-card input[type="tel"],
+.form-card input[type="date"],
+.form-card select {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  outline-offset: 2px;
+}
+
+.form-card input[type="text"]:focus,
+.form-card input[type="tel"]:focus,
+.form-card input[type="date"]:focus,
+.form-card select:focus {
+  border-color: #004aad;
+  box-shadow: 0 0 10px #a4c6ff;
+  outline: none;
+}
+
+/* Hidden utility */
+.hidden {
+  display: none !important;
+}
+
+/* Map Container */
+.map {
+  width: 100%;
+  height: 280px;
+  margin-top: 0.5rem;
+  border-radius: 12px;
+  border: 2px solid #ccc;
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Buttons */
+button {
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 10px;
+  padding: 0.85rem 1.8rem;
+  margin-top: 2.5rem;
+  transition: background-color 0.3s ease, transform 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.btn-primary {
+  width: 100%;
+  background-color: #004aad;
+  color: white;
+  box-shadow: 0 6px 18px rgba(0, 74, 173, 0.45);
+}
+
+.btn-primary:hover {
+  background-color: #002e6d;
+  box-shadow: 0 8px 22px rgba(0, 46, 109, 0.65);
+  transform: scale(1.05);
+}
+
+.btn-secondary {
+  background-color: #e0e0e0;
+  color: #333;
+  padding: 0.7rem 1.4rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+}
+
+.btn-secondary:hover {
+  background-color: #c4c4c4;
+  color: #004aad;
+  box-shadow: 0 5px 18px rgba(0, 74, 173, 0.35);
+}
+
+/* Success button style */
+.btn-success {
+  background-color: #2e7d32;
+  color: white;
+  box-shadow: 0 6px 18px rgba(46, 125, 50, 0.55);
+}
+
+.btn-success:hover {
+  background-color: #1b4d1b;
+  box-shadow: 0 8px 22px rgba(27, 77, 27, 0.75);
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .form-section {
+    margin: 2rem 1rem 4rem;
+    padding: 2rem 1.5rem;
+  }
+
+  .nav-container {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+}
+
+/* --- Receipt popup styling --- */
+/* These styles are injected into the receipt popup window */
+/* You can also include them dynamically via JS */
+
+.receipt-body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 2rem;
+  color: #222;
+  max-width: 600px;
+  margin: auto;
+  line-height: 1.5;
+}
+
+.receipt-body h2 {
+  color: #004aad;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  text-align: center;
+  border-bottom: 2px solid #004aad;
+  padding-bottom: 0.4rem;
+}
+
+.receipt-body p {
+  font-size: 1.1rem;
+  margin: 0.6rem 0;
+  font-weight: 600;
+}
+
+.receipt-body strong {
+  color: #004aad;
+}
+
+/* Receipt print styles */
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+
+  .receipt-body {
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+  }
+}
